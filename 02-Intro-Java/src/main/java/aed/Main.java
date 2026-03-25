@@ -1,6 +1,7 @@
 package aed;
 
 class Main {
+    
     int fibonacci(int n) {
         int res;
 
@@ -16,11 +17,10 @@ class Main {
     }
 
     int fibonacciReturn(int n) {
-        // Se pueden unificar estos if?
+        // Se pueden unificar estos if? si
         if (n == 0) {
             return 0;
-        }
-        if (n == 1) {
+        }else if (n == 1) {
             return 1;
         }
         return fibonacciReturn(n - 1) + fibonacciReturn(n - 2);
@@ -28,11 +28,11 @@ class Main {
 
     // Revisar, no pasa los tests
     double maximo(double[] xs) {
-        double res = 0;
+        double res = xs[0]; // Se agrego esto
 
         for (double x : xs) {
             // Si encuentro un elemento mayor al que tenía guardado, me lo guardo
-            if (x > res) {
+            if (x > res ) {
                 res = x;
             }
         }
